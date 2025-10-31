@@ -1,0 +1,611 @@
+/* Home Page Wrapper */
+/* Styles a wrapper for the home page, preventing horizontal overflow */
+.home-wrapper {
+  overflow-x: hidden;
+}
+
+/* Enhanced Hero Section */
+/* Styles an enhanced hero section, with animations for visibility */
+.hero-enhanced {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient background */
+  color: white; /* White text */
+  padding: 5rem 2rem; /* Padding */
+  text-align: center; /* Centers text */
+  position: relative; /* For positioning child elements */
+  overflow: hidden; /* Hides overflowing content */
+  opacity: 0; /* Initially hidden for animation */
+  transform: translateY(30px); /* Initially moved down for animation */
+  transition: all 0.8s ease; /* Smooth transition for animation */
+}
+
+/* Makes the hero section visible with animation */
+.hero-enhanced.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Moves to original position */
+}
+
+/* Styles a background pattern for the hero section */
+.hero-pattern {
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Covers the entire hero section */
+  opacity: 0.1; /* Subtle opacity */
+  background-image: radial-gradient(circle, white 1px, transparent 1px); /* Dotted pattern */
+  background-size: 50px 50px; /* Size of the pattern */
+}
+
+/* Styles the content within the hero section */
+.hero-content {
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  position: relative; /* For z-index */
+  z-index: 1; /* Ensures content is above pattern */
+}
+
+/* Styles the main title in the hero section */
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+  font-weight: 800; /* Extra bold */
+  margin-bottom: 1.5rem; /* Bottom margin */
+  line-height: 1.2; /* Line height */
+}
+
+/* Styles highlighted text within the hero title */
+.hero-highlight {
+  color: #ffd700; /* Gold color */
+}
+
+/* Styles the subtitle in the hero section */
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem); /* Responsive font size */
+  margin-bottom: 2rem; /* Bottom margin */
+  opacity: 0.95; /* Slight transparency */
+}
+
+/* Styles a container for buttons in the hero section */
+.hero-buttons {
+  display: flex; /* Enables flexbox */
+  gap: 1rem; /* Space between buttons */
+  justify-content: center; /* Centers buttons horizontally */
+  flex-wrap: wrap; /* Allows buttons to wrap to next line */
+}
+
+/* Styles the primary button in the hero section */
+.btn-primary-hero {
+  background: white; /* White background */
+  color: #667eea; /* Blue/purple color */
+  padding: 1rem 2.5rem; /* Padding */
+  font-size: 1.1rem; /* Font size */
+  font-weight: 700; /* Bold font weight */
+  border: none; /* No border */
+  border-radius: 50px; /* Very rounded corners (pill shape) */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow */
+}
+
+/* Styles the primary hero button on hover */
+.btn-primary-hero:hover {
+  transform: translateY(-3px); /* Lifts button */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Larger shadow */
+}
+
+/* Stats Bar Section */
+/* Styles a bar displaying statistics */
+.stats-bar {
+  background: linear-gradient(to right, #0078ff, #00c6ff); /* Gradient background */
+  padding: 2rem 1rem; /* Padding */
+  color: white; /* White text */
+}
+
+/* Styles the container for individual stat items */
+.stats-container {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid columns */
+  gap: 2rem; /* Space between grid items */
+  text-align: center; /* Centers text */
+}
+
+/* Styles individual statistic items, with animations for visibility */
+.stat-item {
+  opacity: 0; /* Initially hidden for animation */
+  transform: scale(0.8); /* Initially scaled down for animation */
+  transition: all 0.6s ease; /* Smooth transition for animation */
+}
+
+/* Styles stat items when they become visible */
+.stat-item.visible {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Returns to original scale */
+}
+
+/* Styles the number part of a statistic */
+.stat-number {
+  font-size: 2.5rem; /* Font size */
+  font-weight: 800; /* Extra bold */
+}
+
+/* Styles the label part of a statistic */
+.stat-label {
+  font-size: 0.9rem; /* Smaller font size */
+  opacity: 0.9; /* Slight transparency */
+}
+
+/* Section General Styling */
+/* Styles a general container for sections */
+.section-container {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  padding: 0 2rem; /* Horizontal padding */
+}
+
+/* Styles a general section title */
+.section-title {
+  text-align: center; /* Centers text */
+  font-size: 2.5rem; /* Font size */
+  margin-bottom: 1rem; /* Bottom margin */
+  color: #333; /* Dark gray color */
+}
+
+/* Styles a section title with white text */
+.section-title-white {
+  text-align: center; /* Centers text */
+  font-size: 2.5rem; /* Font size */
+  margin-bottom: 3rem; /* Bottom margin */
+  color: white; /* White text */
+}
+
+/* Styles a general section subtitle */
+.section-subtitle {
+  text-align: center; /* Centers text */
+  color: #666; /* Gray text */
+  margin-bottom: 3rem; /* Bottom margin */
+  font-size: 1.1rem; /* Font size */
+}
+
+/* Features Section */
+/* Styles a section displaying features */
+.section-features {
+  padding: 5rem 2rem; /* Padding */
+  background: #f8f9fa; /* Light gray background */
+}
+
+/* Styles an enhanced grid for features */
+.features-grid-enhanced {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
+  gap: 2rem; /* Space between grid items */
+}
+
+/* Styles individual enhanced feature cards */
+.feature-card-enhanced {
+  background: white; /* White background */
+  padding: 2rem; /* Padding */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Shadow */
+  transition: all 0.3s ease; /* Smooth transitions */
+  cursor: pointer; /* Pointer cursor */
+  border: 2px solid transparent; /* Transparent border for hover effect */
+}
+
+/* Styles enhanced feature cards on hover */
+.feature-card-enhanced:hover {
+  transform: translateY(-10px); /* Lifts card */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* Larger shadow */
+  border-color: var(--feature-color); /* Changes border color (assuming CSS variable is set via inline style) */
+}
+
+/* Styles icons within feature cards */
+.feature-icon {
+  font-size: 3rem; /* Large font size for icon */
+  margin-bottom: 1rem; /* Bottom margin */
+}
+
+/* Styles titles within feature cards */
+.feature-title {
+  margin-bottom: 0.5rem; /* Bottom margin */
+  font-size: 1.3rem; /* Font size */
+}
+
+/* Styles descriptions within feature cards */
+.feature-desc {
+  color: #666; /* Gray text */
+  line-height: 1.6; /* Line height */
+}
+
+/* Steps Section */
+/* Styles a section displaying steps */
+.section-steps {
+  padding: 5rem 2rem; /* Padding */
+  background: white; /* White background */
+}
+
+/* Styles a grid for steps */
+.steps-grid {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 3rem; /* Space between grid items */
+}
+
+/* Styles individual step items */
+.step-item {
+  text-align: center; /* Centers text */
+}
+
+/* Styles the number of a step */
+.step-number {
+  width: 80px; /* Fixed width */
+  height: 80px; /* Fixed height */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertically aligns content */
+  justify-content: center; /* Horizontally aligns content */
+  margin: 0 auto 1.5rem; /* Centers horizontally with bottom margin */
+  font-size: 1.5rem; /* Font size */
+  font-weight: 800; /* Extra bold */
+  color: white; /* White text */
+}
+
+/* Styles the title of a step */
+.step-title {
+  font-size: 1.4rem; /* Font size */
+  margin-bottom: 0.8rem; /* Bottom margin */
+  color: #333; /* Dark gray color */
+}
+
+/* Styles the description of a step */
+.step-desc {
+  color: #666; /* Gray text */
+  line-height: 1.6; /* Line height */
+}
+
+/* Testimonials Section */
+/* Styles a section for testimonials */
+.section-testimonials {
+  padding: 5rem 2rem; /* Padding */
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); /* Gradient background */
+  color: white; /* White text */
+}
+
+/* Styles the container for testimonials */
+.testimonials-container {
+  max-width: 900px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+  text-align: center; /* Centers text */
+}
+
+/* Styles individual testimonial cards */
+.testimonial-card {
+  background: rgba(255,255,255,0.15); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blurs background behind the card */
+  border-radius: 20px; /* Rounded corners */
+  padding: 3rem 2rem; /* Padding */
+  min-height: 250px; /* Minimum height */
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks items vertically */
+  justify-content: center; /* Centers content vertically */
+}
+
+/* Styles testimonial avatars (e.g., icons) */
+.testimonial-avatar {
+  font-size: 4rem; /* Large font size */
+  margin-bottom: 1rem; /* Bottom margin */
+}
+
+/* Styles the main testimonial text */
+.testimonial-text {
+  font-size: 1.3rem; /* Font size */
+  font-style: italic; /* Italic text */
+  margin-bottom: 1.5rem; /* Bottom margin */
+  line-height: 1.8; /* Line height */
+}
+
+/* Styles the author's name in a testimonial */
+.author-name {
+  font-weight: 700; /* Bold font weight */
+  font-size: 1.2rem; /* Font size */
+}
+
+/* Styles the author's role in a testimonial */
+.author-role {
+  opacity: 0.9; /* Slight transparency */
+  font-size: 0.95rem; /* Smaller font size */
+}
+
+/* Styles navigation dots for testimonials (e.g., a carousel) */
+.testimonial-dots {
+  display: flex; /* Enables flexbox */
+  gap: 0.5rem; /* Space between dots */
+  justify-content: center; /* Centers dots horizontally */
+  margin-top: 2rem; /* Top margin */
+}
+
+/* Styles individual testimonial dots */
+.dot {
+  width: 10px; /* Fixed width */
+  height: 10px; /* Fixed height */
+  border-radius: 5px; /* Rounded corners */
+  background: rgba(255,255,255,0.5); /* Semi-transparent white background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease; /* Smooth transitions */
+  padding: 0; /* No padding */
+}
+
+/* Styles the active testimonial dot */
+.dot.active {
+  width: 30px; /* Wider */
+  background: white; /* White background */
+}
+
+/* Styles testimonial dots on hover */
+.dot:hover {
+  background: rgba(255,255,255,0.8); /* More opaque white */
+  transform: none; /* Prevents transform from general button hover */
+}
+
+/* Templates Section */
+/* Styles a section for displaying templates */
+.section-templates {
+  padding: 5rem 2rem; /* Padding */
+  background: #f8f9fa; /* Light gray background */
+}
+
+/* Styles an enhanced grid for templates */
+.templates-grid-enhanced {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+  gap: 2rem; /* Space between grid items */
+}
+
+/* Styles individual enhanced template cards */
+.template-card-enhanced {
+  background: white; /* White background */
+  border-radius: 16px; /* Rounded corners */
+  overflow: hidden; /* Hides overflowing content */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Shadow */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative; /* For positioning child elements */
+}
+
+/* Styles enhanced template cards on hover */
+.template-card-enhanced:hover {
+  transform: translateY(-10px); /* Lifts card */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* Larger shadow */
+}
+
+/* Styles a badge on template cards (e.g., "New", "Popular") */
+.template-badge {
+  position: absolute; /* Absolute positioning */
+  top: 1rem; /* Position from top */
+  right: 1rem; /* Position from right */
+  background: #ffd700; /* Gold background */
+  color: #333; /* Dark gray text */
+  padding: 0.3rem 0.8rem; /* Padding */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 0.8rem; /* Smaller font size */
+  font-weight: 700; /* Bold font weight */
+  z-index: 1; /* Ensures badge is above other content */
+}
+
+/* Styles the preview area of a template card */
+.template-preview {
+  transform: scale(0.4); /* Scales down the preview */
+  transform-origin: top center; /* Sets origin for transform */
+  pointer-events: none; /* Prevents pointer events on scaled content */
+  height: 300px; /* Fixed height */
+  overflow: hidden; /* Hides overflowing content */
+}
+
+/* Styles the information section of a template card */
+.template-info {
+  padding: 1.5rem; /* Padding */
+}
+
+/* Styles the name of the template */
+.template-name {
+  font-size: 1.5rem; /* Font size */
+  margin-bottom: 0.5rem; /* Bottom margin */
+  color: #333; /* Dark gray color */
+}
+
+/* Styles the description of the template */
+.template-desc {
+  color: #666; /* Gray text */
+  margin-bottom: 1rem; /* Bottom margin */
+}
+
+/* Styles a general button for template actions */
+.btn-template {
+  width: 100%; /* Full width */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 0.8rem; /* Padding */
+  border-radius: 8px; /* Rounded corners */
+  font-weight: 600; /* Bold font weight */
+  cursor: pointer; /* Pointer cursor */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+/* Styles template buttons on hover */
+.btn-template:hover {
+  opacity: 0.9; /* Slight transparency */
+  transform: translateY(0); /* Prevents transform from general button hover */
+}
+
+/* Styles a "classical" template button */
+.btn-template.classical {
+  background: #0078ff; /* Blue background */
+}
+
+/* Styles a "europass" template button */
+.btn-template.europass {
+  background: #004080; /* Dark blue background */
+}
+
+/* Final Call to Action Section */
+/* Styles a final call-to-action section */
+.section-final-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient background */
+  color: white; /* White text */
+  padding: 5rem 2rem; /* Padding */
+  text-align: center; /* Centers text */
+}
+
+/* Styles the content within the final CTA */
+.cta-content {
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Centers horizontally */
+}
+
+/* Styles the title of the final CTA */
+.cta-title {
+  font-size: 2.5rem; /* Font size */
+  margin-bottom: 1rem; /* Bottom margin */
+  font-weight: 800; /* Extra bold */
+  color: white; /* White text */
+}
+
+/* Styles the subtitle of the final CTA */
+.cta-subtitle {
+  font-size: 1.2rem; /* Font size */
+  margin-bottom: 2rem; /* Bottom margin */
+  opacity: 0.95; /* Slight transparency */
+}
+
+/* Styles the button in the final CTA */
+.btn-final-cta {
+  background: white; /* White background */
+  color: #667eea; /* Blue/purple color */
+  padding: 1.2rem 3rem; /* Padding */
+  font-size: 1.2rem; /* Font size */
+  font-weight: 700; /* Bold font weight */
+  border: none; /* No border */
+  border-radius: 50px; /* Very rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2); /* Shadow */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Styles the final CTA button on hover */
+.btn-final-cta:hover {
+  transform: scale(1.05); /* Slightly scales up */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Larger shadow */
+}
+
+/* Styles a small note in the final CTA */
+.cta-note {
+  margin-top: 1.5rem; /* Top margin */
+  opacity: 0.8; /* Transparency */
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Adjusts hero title font size */
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  /* Adjusts hero subtitle font size */
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Adjusts section titles and CTA title font size */
+  .section-title,
+  .section-title-white,
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  /* Changes stats container to 2 columns */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Changes features grid to a single column */
+  .features-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Changes steps grid to a single column with adjusted gap */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Changes templates grid to a single column */
+  .templates-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjusts template preview scaling and height */
+  .template-preview {
+    transform: scale(0.3);
+    height: 200px;
+  }
+
+  /* Changes hero buttons to column layout */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Sets width and max-width for primary hero and final CTA buttons */
+  .btn-primary-hero,
+  .btn-final-cta {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Adjusts testimonial text font size */
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  /* Adjusts padding for enhanced feature cards */
+  .feature-card-enhanced {
+    padding: 1.5rem;
+  }
+}
+
+/* Styles for screens smaller than 480px */
+@media (max-width: 480px) {
+  /* Adjusts padding for nav bar */
+  nav {
+    padding: 1rem;
+  }
+
+  /* Adjusts padding for various sections */
+  .section-features,
+  .section-steps,
+  .section-testimonials,
+  .section-templates,
+  .section-final-cta {
+    padding: 3rem 1rem;
+  }
+
+  /* Adjusts stat number font size */
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Adjusts feature icon font size */
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Adjusts step number width, height, and font size */
+  .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+}

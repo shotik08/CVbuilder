@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./templates.css/"
+import Navbar from '../components/Navbar';
 
 export default function Templates() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -85,7 +87,7 @@ export default function Templates() {
 
   return (
     <div className="templates-page">
-      
+      <section ><Navbar /></section>
       <section className="templates-hero">
         <div className="templates-hero-content">
           <h1>Choose Your Perfect Template</h1>

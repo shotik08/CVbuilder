@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ClassicalTemplate from "../components/templates/ClassicalTemplate";
 import EuropassTemplate from "../components/templates/EuropassTemplate";
+import "./Home.css/"
+import "../components/Footer.jsx/"
+import Navbar from '../components/Navbar';
+
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -73,9 +77,14 @@ export default function Home() {
     }
   };
 
+ 
+
   return (
+    
     <div className="home-wrapper">
-     
+
+      <section ><Navbar /></section>
+      
       <section className={`hero-enhanced ${isVisible ? 'visible' : ''}`}>
         <div className="hero-pattern"></div>
         <div className="hero-content">
@@ -250,4 +259,5 @@ export default function Home() {
       </section>
     </div>
   );
+
 }

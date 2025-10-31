@@ -8,9 +8,10 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
 export default function App() {
+
+  
   return (
     <Router>
-      <Navbar />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,7 +21,6 @@ export default function App() {
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
-      <Footer />
     </Router>
   );
 }
