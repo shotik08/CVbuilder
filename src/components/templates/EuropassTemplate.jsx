@@ -36,7 +36,7 @@ export default function EuropassTemplate({ formData, handleChange }) {
         </div>
       )}
 
-      {/* Render Custom Sections */}
+     
       {formData.customSections && formData.customSections.length > 0 && (
         <>
           {formData.customSections.map((section) => (

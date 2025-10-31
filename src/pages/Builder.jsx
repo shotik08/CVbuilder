@@ -27,7 +27,6 @@ export default function Builder() {
   const [showAddSectionModal, setShowAddSectionModal] = useState(false);
   const [newSectionTitle, setNewSectionTitle] = useState("");
 
-  // Load saved data from localStorage on mount
   useEffect(() => {
     const savedData = localStorage.getItem(`cv-data-${template}`);
     const savedCustomSections = localStorage.getItem(`cv-custom-sections-${template}`);
@@ -40,7 +39,7 @@ export default function Builder() {
     }
   }, [template]);
 
-  // Calculate completion percentage
+  
   useEffect(() => {
     const standardFields = Object.values(formData);
     const customFields = customSections.map(section => section.content);
@@ -50,7 +49,7 @@ export default function Builder() {
     setCompletionPercentage(percentage);
   }, [formData, customSections]);
 
-  // Auto-save to localStorage
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       localStorage.setItem(`cv-data-${template}`, JSON.stringify(formData));
@@ -139,7 +138,7 @@ export default function Builder() {
     { id: "skills", label: "Skills", icon: "⚡" }
   ];
 
-  // Add custom sections to navigation
+  
   const allSections = [
     ...sections,
     ...customSections.map(section => ({
@@ -152,7 +151,7 @@ export default function Builder() {
   ];
 
   const renderFormSection = () => {
-    // Check if it's a custom section
+   
     if (activeSection.startsWith('custom-')) {
       const customId = parseInt(activeSection.replace('custom-', ''));
       const section = customSections.find(s => s.id === customId);
@@ -186,7 +185,7 @@ export default function Builder() {
       );
     }
 
-    // Standard sections
+    
     switch (activeSection) {
       case "personal":
         return (
@@ -322,7 +321,7 @@ export default function Builder() {
     }
   };
 
-  // Prepare data for template including custom sections
+  
   const templateData = {
     ...formData,
     customSections: customSections
@@ -330,7 +329,7 @@ export default function Builder() {
 
   return (
     <div className="builder-wrapper">
-      {/* Progress Bar */}
+      
       <div className="progress-bar-container">
         <div className="progress-info">
           <span>CV Completion</span>
@@ -345,7 +344,7 @@ export default function Builder() {
       </div>
 
       <div className="builder-container">
-        {/* Left Sidebar - Form */}
+        
         <div className="builder-sidebar">
           <div className="builder-header">
             <h2>
@@ -360,14 +359,14 @@ export default function Builder() {
             </button>
           </div>
 
-          {/* Auto-save indicator */}
+         
           {isSaved && (
             <div className="auto-save-indicator">
               ✓ Auto-saved
             </div>
           )}
 
-          {/* Section Navigation */}
+        
           <div className="section-nav">
             {allSections.map((section) => (
               <div key={section.id} className="section-nav-item">
@@ -381,7 +380,7 @@ export default function Builder() {
               </div>
             ))}
             
-            {/* Add Custom Section Button */}
+            
             <button 
               className="btn-add-section"
               onClick={() => setShowAddSectionModal(true)}
@@ -391,12 +390,12 @@ export default function Builder() {
             </button>
           </div>
 
-          {/* Form Content */}
+        
           <div className="form-content">
             {renderFormSection()}
           </div>
 
-          {/* Action Buttons */}
+        
           <div className="builder-actions">
             <button className="btn-secondary" onClick={handleClear}>
               🗑️ Clear All
@@ -410,7 +409,7 @@ export default function Builder() {
           </div>
         </div>
 
-        {/* Right Side - Live Preview */}
+        
         <div className="builder-preview">
           <div className="preview-header">
             <h3>Live Preview</h3>
@@ -434,7 +433,7 @@ export default function Builder() {
         </div>
       </div>
 
-      {/* Add Custom Section Modal */}
+    
       {showAddSectionModal && (
         <div className="modal-overlay" onClick={() => setShowAddSectionModal(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

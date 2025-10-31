@@ -72,7 +72,7 @@ export default function SignIn() {
   return (
     <div className="auth-page">
       <div className="auth-container-enhanced">
-        {/* Left Side - Branding */}
+        
         <div className="auth-branding">
           <div className="auth-branding-content">
             <h1>Welcome Back! 👋</h1>

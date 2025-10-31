@@ -85,7 +85,7 @@ export default function Templates() {
 
   return (
     <div className="templates-page">
-      {/* Hero Section */}
+      
       <section className="templates-hero">
         <div className="templates-hero-content">
           <h1>Choose Your Perfect Template</h1>
@@ -107,7 +107,7 @@ export default function Templates() {
         </div>
       </section>
 
-      {/* Category Filter */}
+     
       <section className="templates-filter-section">
         <div className="templates-container">
           <h2 className="filter-title">Browse by Category</h2>
@@ -126,7 +126,7 @@ export default function Templates() {
         </div>
       </section>
 
-      {/* Templates Grid */}
+     
       <section className="templates-grid-section">
         <div className="templates-container">
           <div className="templates-count">
@@ -201,7 +201,7 @@ export default function Templates() {
         </div>
       </section>
 
-      {/* Features Section */}
+      
       <section className="templates-features-section">
         <div className="templates-container">
           <h2>Why Choose Our Templates?</h2>
@@ -230,7 +230,7 @@ export default function Templates() {
         </div>
       </section>
 
-      {/* CTA Section */}
+     
       <section className="templates-cta-section">
         <div className="templates-cta-content">
           <h2>Can't Decide? Start with Our Most Popular Template</h2>
